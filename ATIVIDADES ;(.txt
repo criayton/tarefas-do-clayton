@@ -1,0 +1,56 @@
+CREATE DATABASE loja
+CREATE TABLE cliente (
+cpf int,
+nome Varchar(45),
+endereco Varchar(45)
+);
+CREATE TABLE pedido (
+numero int,
+data_pedido DATETIME,
+status_pedido Varchar (45),
+endereço Varchar (45),
+cpf_cliente int
+);
+CREATE TABLE produto (
+codigo int,
+nome Varchar (45),
+preço Varchar (45),
+cod_categoria int
+);
+CREATE TABLE item_pedido (
+numero_pedido int,
+codigo_produto int,
+qtde int
+);
+CREATE TABLE categoria (
+codigo int,
+nome Varchar (45)
+);
+
+
+
+
+
+
+01) Utilize o banco de dados que você criou no exercício 01 da lista 05. 
+01.a) Adicione cinco registros em cada tabela (cliente, pedido, produto, item_pedido, categoria).
+01.b) Realize as seguintes consultas nesse banco de dados:
+Listar todos os dados de todos os clientes.
+Listar apenas os nomes dos clientes.
+Listar numero, status, e cpf_cliente de todos os pedidos
+Listar todos os dados de todas as categorias.
+
+
+
+
+
+insert into pedido
+values (1, 2022-04-29, 'Encaminhado',  'Rua José, Bairro São João, Número 107', 
+14554578822);
+
+insert into produto
+values (12, 'Aço', 'R$200,00', 23)
+
+insert into categoria
+values (4, 'Metais')
+
